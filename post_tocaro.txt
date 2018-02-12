@@ -1,0 +1,22 @@
+Json Format
+payload={
+    "text": "This is sample message. link format is http://example.com",
+    "color": "info", // info, warning, danger, success
+    "attachments": [
+      {
+        "title": "This is sample title",
+        "value": "This is sample value"
+      },
+      {
+         "image_url": "https://dev.tocaro.im/assets/www/img_integration_inbound_webhook.png"
+      }
+    ]
+  }
+  
+  
+
+Curl Example
+curl -X POST --data-urlencode 'payload={"text": "This is test message. ex link http://example.com.", "attachments": [ { "title": "This is sample title", "value": "This is sample value" } ] }' https://hooks.tocaro.im/integrations/inbound_webhook/nwje8mqjy0dvpfcpylr4y4xbzslsfgl5
+
+Curl Example - send directly
+curl -X POST -H 'Content-type: application/json' --data '{"text": "This is test message. ex link http://example.com.", "attachments": [ { "title": "This is sample title", "value": "This is sample value" } ] }' https://hooks.tocaro.im/integrations/inbound_webhook/nwje8mqjy0dvpfcpylr4y4xbzslsfgl5
